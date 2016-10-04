@@ -81,7 +81,8 @@ public class TestGui implements ActionListener {
              * String filename = chooser.getSelectedFile().getCanonicalPath();
              */
             String filename = "Outlook-new.pst";
-            filename = "G:\\From old Tower\\pff\\java\\Old Email.pst";
+            filename = "/home/magneto/Desktop/邮件测试/已发送.pst";
+            //filename = "G:\\From old Tower\\pff\\java\\Old Email.pst";
             // filename = "RichardJohnson@sumac.uk.com - exchange.ost";
             // String filename = "Outlook 32bit.pst";
             // String russian = "Узеи́р Абду́л-Гусе́йн оглы́ Гаджибе́ков (азерб.

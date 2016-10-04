@@ -89,6 +89,7 @@ public class PSTFolder extends PSTObject {
     public Vector<PSTFolder> getSubFolders() throws PSTException, IOException {
         this.initSubfoldersTable();
         final Vector<PSTFolder> output = new Vector<>();
+        if (this.subfoldersTable == null) return output;
         try {
             final List<HashMap<Integer, PSTTable7CItem>> itemMapSet = this.subfoldersTable.getItems();
             for (final HashMap<Integer, PSTTable7CItem> itemMap : itemMapSet) {
@@ -107,6 +108,11 @@ public class PSTFolder extends PSTObject {
 
     private void initSubfoldersTable() throws IOException, PSTException {
         if (this.subfoldersTable != null) {
+            return;
+        }
+        System.out.println(this.getDisplayName());
+        if ("SPAM Search Folder 2".equalsIgnoreCase(this.getDisplayName())) {
+            System.out.printf("XX:" + this.getDisplayName());
             return;
         }
 
